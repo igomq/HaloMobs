@@ -1,7 +1,7 @@
 # Minecraft Plugin YML
 name: HaloMobs
 main: me.gomq.halomobs.HaloMobs
-version: 0.0.1
+version: 0.1.0
 api-version: 1.18
 author: GomQ
 description: Minecraft Plugin for Halloween Server
