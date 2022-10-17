@@ -1,15 +1,22 @@
 package me.gomq.halomobs;
 
+import me.gomq.halomobs.Events.EntityDeadEvent;
+import me.gomq.halomobs.Events.PlayerInteractionEvent;
+import me.gomq.halomobs.Recipes.RecipeManager;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class HaloMobs extends JavaPlugin {
     @Override
     public void onEnable() {
+        initalize();
         InputStream propertyStream = getClass().getClassLoader().getResourceAsStream("version.properties");
         Properties propertyReader = new Properties();
 
@@ -38,4 +45,14 @@ public class HaloMobs extends JavaPlugin {
 
     @Override
     public void onDisable() { getLogger().info(ChatColor.RED + "Disabling HaloMobs Plugin."); }
+
+    public void initalize() {
+        ArrayList<ShapelessRecipe> recipes = RecipeManager.getRecipes();
+        for (ShapelessRecipe r : recipes) {
+            Bukkit.addRecipe(r);
+        }
+
+        getServer().getPluginManager().registerEvents(new PlayerInteractionEvent(), this);
+        getServer().getPluginManager().registerEvents(new EntityDeadEvent(), this);
+    }
 }
