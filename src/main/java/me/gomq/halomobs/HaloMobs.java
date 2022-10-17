@@ -1,5 +1,6 @@
 package me.gomq.halomobs;
 
+import me.gomq.halomobs.Events.EntityDeadEvent;
 import me.gomq.halomobs.Events.PlayerInteractionEvent;
 import me.gomq.halomobs.Recipes.RecipeManager;
 import org.bukkit.Bukkit;
@@ -15,6 +16,7 @@ import java.util.Properties;
 public class HaloMobs extends JavaPlugin {
     @Override
     public void onEnable() {
+        initalize();
         InputStream propertyStream = getClass().getClassLoader().getResourceAsStream("version.properties");
         Properties propertyReader = new Properties();
 
@@ -51,5 +53,6 @@ public class HaloMobs extends JavaPlugin {
         }
 
         getServer().getPluginManager().registerEvents(new PlayerInteractionEvent(), this);
+        getServer().getPluginManager().registerEvents(new EntityDeadEvent(), this);
     }
 }
