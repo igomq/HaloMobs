@@ -11,6 +11,8 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import java.util.Random;
 
 import static me.gomq.halomobs.Recipes.EggRecipe.Egg;
+import static me.gomq.halomobs.Util.Eggs.SPAWN_EGGS;
+
 public class PlayerInteractionEvent implements Listener {
     @EventHandler
     public void onPlayerInteract (PlayerInteractEvent e) {
@@ -21,7 +23,7 @@ public class PlayerInteractionEvent implements Listener {
 
                 Random rand = new Random();
                 interacted.getInventory().removeItem(Egg);
-                interacted.getInventory().addItem(new ItemStack(Material.values()[rand.nextInt(Material.values().length)], 1));
+                interacted.getInventory().addItem(new ItemStack(SPAWN_EGGS[rand.nextInt(SPAWN_EGGS.length)], 1));
             }
         }
     }
