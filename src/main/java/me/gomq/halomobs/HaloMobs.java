@@ -17,7 +17,7 @@ import java.util.Properties;
 public class HaloMobs extends JavaPlugin {
     @Override
     public void onEnable() {
-        initalize();
+        initialize();
         InputStream propertyStream = getClass().getClassLoader().getResourceAsStream("version.properties");
         Properties propertyReader = new Properties();
 
@@ -47,7 +47,7 @@ public class HaloMobs extends JavaPlugin {
     @Override
     public void onDisable() { getLogger().info(ChatColor.RED + "Disabling HaloMobs Plugin."); }
 
-    public void initalize() {
+    public void initialize() {
         ArrayList<ShapelessRecipe> recipes = RecipeManager.getRecipes();
         for (ShapelessRecipe r : recipes) {
             Bukkit.addRecipe(r);
