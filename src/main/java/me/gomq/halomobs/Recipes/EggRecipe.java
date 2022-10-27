@@ -26,8 +26,8 @@ public class EggRecipe {
 
     public static ShapelessRecipe getRecipe() {
         ShapelessRecipe recipe = new ShapelessRecipe(NamespacedKey.minecraft("r_egg"), Egg);
-        recipe.addIngredient(Material.DRAGON_BREATH);
-        recipe.addIngredient(Material.NETHERITE_SCRAP);
+        recipe.addIngredient(Material.EGG);
+        recipe.addIngredient(Material.IRON_INGOT);
         recipe.addIngredient(Material.WHITE_DYE);
 
         return recipe;

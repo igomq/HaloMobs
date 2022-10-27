@@ -1,6 +1,5 @@
 package me.gomq.halomobs.Events;
 
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 
 import org.bukkit.entity.Player;
@@ -17,14 +16,12 @@ public class EntityDeadEvent implements Listener {
     public void onEntityDeath (EntityDeathEvent event) {
         Player killer = event.getEntity().getKiller();
 
-        assert killer != null;
-        if (killer.getType() == EntityType.PLAYER) {
+        if (killer != null && killer.getType() == EntityType.PLAYER) {
             Random rand = new Random();
             int bound = rand.nextInt(100) + 1;
 
             if (bound <= 25) {
-                Player killedPlayer = killer;
-                killedPlayer.getInventory().addItem(Egg);
+                killer.getInventory().addItem(Egg);
             }
         }
     }
