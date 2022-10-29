@@ -1,5 +1,6 @@
 package me.gomq.halomobs.Events;
 
+import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -22,8 +23,12 @@ public class PlayerInteractionEvent implements Listener {
                 e.setCancelled(true);
 
                 Random rand = new Random();
-                interacted.getInventory().removeItem(Egg);
-                interacted.getInventory().addItem(new ItemStack(SPAWN_EGGS[rand.nextInt(SPAWN_EGGS.length)], 1));
+                if (interacted.getInventory().firstEmpty() == -1) {
+                    interacted.sendMessage(ChatColor.RED + "인벤토리를 1칸 이상 비우고 사용해주세요.");
+                } else {
+                    interacted.getInventory().removeItem(Egg);
+                    interacted.getInventory().addItem(new ItemStack(SPAWN_EGGS[rand.nextInt(SPAWN_EGGS.length)], 1));
+                }
             }
         }
     }
