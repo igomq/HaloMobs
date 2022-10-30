@@ -1,7 +1,7 @@
 # HaloMobs
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
-[![Version](https://img.shields.io/static/v1?label=version&message=1.0RC1&color=blue)](https://github.com/igomq/releases/latest)
+[![Version](https://img.shields.io/static/v1?label=version&message=1.0&color=blue)](https://github.com/igomq/releases/latest)
 [![Issues](https://img.shields.io/github/issues/igomq/HaloMobs)](https://github.com/igomq/HaloMobs/issues)
 [![Stars](https://img.shields.io/github/stars/igomq/HaloMobs)](https://github.com/igomq/HaloMobs/stargazers)
 
