@@ -28,6 +28,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import static me.gomq.halomobs.AddAdvancements.initializeAdvancements;
 import static me.gomq.halomobs.Recipes.EggRecipe.Egg;
 
 public class HaloMobs extends JavaPlugin {
@@ -83,36 +84,8 @@ public class HaloMobs extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerAchievementDoneEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerServerEnterEvent(), this);
 
-        advancementInitialize();
-    }
-
-    public void advancementInitialize() {
         mainAdvancement.enableSQLite(new File("database.db"));
-
         api = UltimateAdvancementAPI.getInstance(this);
-
-        AdvancementTab advancementTab = api.createAdvancementTab("halomobs");
-        RootAdvancement rootAdvancement = new RootAdvancement(advancementTab,
-                "custom",
-                new AdvancementDisplay(Material.WAXED_OXIDIZED_COPPER, "HaloMobs", AdvancementFrameType.TASK, true, true, 0, 0, "The Start of the Halloween"),
-                "textures/block/carved_pumpkin.png"
-        );
-
-        Advancements.CraftAdv createEgg = new Advancements.CraftAdv("create_egg_item",
-                new AdvancementDisplay(Material.TURTLE_EGG, "Egg Enterance", AdvancementFrameType.TASK, true, true, 1.5f, 1.5f, "Craft an Egg Item"),
-                Egg, Egg.asQuantity(16),
-                rootAdvancement);
-
-        Advancements.KillAdv killGolem = new Advancements.KillAdv("kill_golem",
-                new AdvancementDisplay(Material.IRON_BLOCK, "Golem Killer", AdvancementFrameType.TASK, true, true, 3f, 0, "Kill Iron Golem twice"),
-                EntityType.IRON_GOLEM, new ItemStack(Material.IRON_BLOCK, 16),
-                rootAdvancement, 2);
-
-        Advancements.MineAdv mineNetherite = new Advancements.MineAdv("mine_netherite",
-                new AdvancementDisplay(Material.ANCIENT_DEBRIS, "Netherite Master", AdvancementFrameType.TASK, true, true, 1.5f, 0, "Mine Ancient Debris 10 times"),
-                Material.ANCIENT_DEBRIS, new ItemStack(Material.NETHERITE_BLOCK, 1),
-                killGolem, 10);
-
-        advancementTab.registerAdvancements(rootAdvancement, createEgg, killGolem, mineNetherite);
+        initializeAdvancements();
     }
 }
