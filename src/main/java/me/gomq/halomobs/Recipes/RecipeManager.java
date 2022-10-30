@@ -8,6 +8,7 @@ public class RecipeManager {
     public static ArrayList<ShapelessRecipe> getRecipes() {
         ArrayList<ShapelessRecipe> recipes = new ArrayList<>();
         recipes.add(EggRecipe.getRecipe());
+        recipes.add(TrashRecipe.getRecipe());
 
         return recipes;
     }

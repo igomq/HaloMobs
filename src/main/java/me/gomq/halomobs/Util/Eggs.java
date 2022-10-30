@@ -20,6 +20,8 @@ public class Eggs {
             Material.CHICKEN_SPAWN_EGG,
             Material.STRIDER_SPAWN_EGG,
             Material.SKELETON_SPAWN_EGG,
+            Material.GUARDIAN_SPAWN_EGG,
+            Material.ELDER_GUARDIAN_SPAWN_EGG,
             Material.SILVERFISH_SPAWN_EGG,
             Material.SHEEP_SPAWN_EGG,
             Material.CREEPER_SPAWN_EGG,
@@ -37,6 +39,7 @@ public class Eggs {
             Material.LLAMA_SPAWN_EGG,
             Material.MULE_SPAWN_EGG,
             Material.PANDA_SPAWN_EGG,
-            Material.WITCH_SPAWN_EGG
+            Material.WITCH_SPAWN_EGG,
+            Material.MAGMA_CUBE_SPAWN_EGG
     };
 }
