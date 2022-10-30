@@ -40,6 +40,7 @@ public class Eggs {
             Material.MULE_SPAWN_EGG,
             Material.PANDA_SPAWN_EGG,
             Material.WITCH_SPAWN_EGG,
-            Material.MAGMA_CUBE_SPAWN_EGG
+            Material.MAGMA_CUBE_SPAWN_EGG,
+            Material.ENDERMITE_SPAWN_EGG
     };
 }
