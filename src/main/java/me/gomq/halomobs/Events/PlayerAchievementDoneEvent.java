@@ -77,6 +77,7 @@ public class PlayerAchievementDoneEvent implements Listener {
             inv.addItem(support_pickaxe);
             inv.addItem(support_axe);
             inv.addItem(support_shield);
+            inv.addItem(new ItemStack(Material.GOLDEN_CARROT, 31));
 
             player.sendMessage(ChatColor.GOLD + "[몬스터 1회 킬] " + ChatColor.GREEN + "업적을 달성하여 초보자 지원 아이템을 지급받았습니다.");
         } else if (e.getAdvancement().getKey().getKey().equals("adventure/hero_of_the_village")) {
@@ -105,6 +106,8 @@ public class PlayerAchievementDoneEvent implements Listener {
 
             hero_sword.setItemMeta(hero_sword_meta);
             p.getInventory().addItem(hero_sword);
+
+            p.sendMessage(ChatColor.GOLD + "[마을을 지킨 자] " + ChatColor.GREEN + "업적을 달성하여 마을을 지킨 자의 검을 지급받았습니다.");
         }
     }
 }
