@@ -22,7 +22,6 @@ public class PlayerAchievementDoneEvent implements Listener {
     @EventHandler
     public void onPlayerAchievementDone (PlayerAdvancementDoneEvent e) {
         Player pd = e.getPlayer();
-        pd.sendMessage(e.getAdvancement().getKey().getKey());
 
         if (e.getAdvancement().getKey().getKey().equals("adventure/kill_all_mobs")) {
             Player player = e.getPlayer();
