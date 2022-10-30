@@ -1,6 +1,5 @@
 package me.gomq.halomobs.Events;
 
-import com.fren_gor.ultimateAdvancementAPI.UltimateAdvancementAPI;
 import com.fren_gor.ultimateAdvancementAPI.events.PlayerLoadingCompletedEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

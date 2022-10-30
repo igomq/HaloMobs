@@ -1,24 +1,15 @@
 package me.gomq.halomobs;
 
 import com.fren_gor.ultimateAdvancementAPI.AdvancementMain;
-import com.fren_gor.ultimateAdvancementAPI.AdvancementTab;
 import com.fren_gor.ultimateAdvancementAPI.UltimateAdvancementAPI;
-import com.fren_gor.ultimateAdvancementAPI.advancement.BaseAdvancement;
-import com.fren_gor.ultimateAdvancementAPI.advancement.RootAdvancement;
-import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementDisplay;
-import com.fren_gor.ultimateAdvancementAPI.advancement.display.AdvancementFrameType;
 
 import me.gomq.halomobs.Events.EntityDeadEvent;
 import me.gomq.halomobs.Events.PlayerAchievementDoneEvent;
 import me.gomq.halomobs.Events.PlayerInteractionEvent;
 import me.gomq.halomobs.Events.PlayerServerEnterEvent;
 import me.gomq.halomobs.Recipes.RecipeManager;
-import me.gomq.halomobs.Util.Advancements;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.entity.EntityType;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
