@@ -50,9 +50,9 @@ public class AddAdvancements {
                 rootAdvancement);
 
         Advancements.UseAdv useEgg = new Advancements.UseAdv("use_egg_item",
-                new AdvancementDisplay(Material.TURTLE_EGG, "Egg Master", AdvancementFrameType.TASK, true, true, 3f, 4.5f, "Use an Egg Item thirty-two times"),
+                new AdvancementDisplay(Material.TURTLE_EGG, "Egg Master", AdvancementFrameType.TASK, true, true, 3f, 4.5f, "Use an Egg Item thirty-one times"),
                 Egg, new ItemStack(Material.END_CRYSTAL, 4),
-                createEgg, 32);
+                createEgg, 31);
 
         Advancements.KillAdv killGolem = new Advancements.KillAdv("kill_golem",
                 new AdvancementDisplay(Material.IRON_BLOCK, "Golem Killer", AdvancementFrameType.TASK, true, true, 1.5f, 1.5f, "Kill Iron Golem twice"),

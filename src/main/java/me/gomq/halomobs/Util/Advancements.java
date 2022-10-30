@@ -37,7 +37,7 @@ public class Advancements {
 
         @Override
         public void giveReward(@NotNull Player player) {
-            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
+            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs - ") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
             player.getInventory().addItem(itemStack);
         }
     }
@@ -61,7 +61,7 @@ public class Advancements {
 
         @Override
         public void giveReward(@NotNull Player player) {
-            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
+            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs - ") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
             player.getInventory().addItem(itemStack);
         }
     }
@@ -88,7 +88,7 @@ public class Advancements {
 
         @Override
         public void giveReward(@NotNull Player player) {
-            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
+            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs - ") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
             player.getInventory().addItem(itemStack);
         }
     }
@@ -114,7 +114,7 @@ public class Advancements {
 
         @Override
         public void giveReward(@NotNull Player player) {
-            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
+            player.sendMessage(ChatColor.GOLD + (ChatColor.BOLD + "HaloMobs - ") + ChatColor.RESET + ChatColor.RED + title + ChatColor.GREEN + " 클리어 보상이 지급되었습니다!");
             player.getInventory().addItem(itemStack);
         }
     }

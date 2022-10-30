@@ -14,6 +14,6 @@ public class PlayerServerEnterEvent implements Listener {
     public void onPlayerJoin (PlayerLoadingCompletedEvent e) {
         Player p = e.getPlayer();
 
-        Objects.requireNonNull(api.getAdvancementTab("halomobs")).updateAdvancementsToTeam(p);
+        Objects.requireNonNull(api.getAdvancementTab("halomobs")).updateEveryAdvancement(p);
     }
 }
